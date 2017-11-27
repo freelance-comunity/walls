@@ -46,7 +46,7 @@ class ClientsController extends Controller
 
         Client::create($request->all());
 
-        Session::flash('message', 'Client added!');
+        Session::flash('message', 'Cliente agregado!');
         Session::flash('status', 'success');
 
         return redirect('admin/clients');
@@ -94,7 +94,7 @@ class ClientsController extends Controller
         $client = Client::findOrFail($id);
         $client->update($request->all());
 
-        Session::flash('message', 'Client updated!');
+        Session::flash('message', 'Cliente actualizado!');
         Session::flash('status', 'success');
 
         return redirect('admin/clients');
@@ -113,7 +113,7 @@ class ClientsController extends Controller
 
         $client->delete();
 
-        Session::flash('message', 'Client deleted!');
+        Session::flash('message', 'Cliente eliminado!');
         Session::flash('status', 'success');
 
         return redirect('admin/clients');

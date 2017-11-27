@@ -47,7 +47,7 @@ class UserController extends Controller
         $input['password'] = Hash::make($request->input('password'));
         User::create($input);
 
-        Session::flash('message', 'User added!');
+        Session::flash('message', 'Usuario agregado!');
         Session::flash('status', 'success');
 
         return redirect('admin/users');
@@ -98,7 +98,7 @@ class UserController extends Controller
 
         $user->update($input);
 
-        Session::flash('message', 'User updated!');
+        Session::flash('message', 'Usuario actualizado!');
         Session::flash('status', 'success');
 
         return redirect('admin/users');
@@ -117,7 +117,7 @@ class UserController extends Controller
 
         $user->delete();
 
-        Session::flash('message', 'User deleted!');
+        Session::flash('message', 'Usuario eliminado!');
         Session::flash('status', 'success');
 
         return redirect('admin/users');

@@ -45,7 +45,7 @@ class PermissionController extends Controller
 
         Permission::create($request->all());
 
-        Session::flash('message', 'Permission added!');
+        Session::flash('message', 'Permiso agregado!');
         Session::flash('status', 'success');
 
         return redirect('admin/permissions');
@@ -92,7 +92,7 @@ class PermissionController extends Controller
         $permission = Permission::findOrFail($id);
         $permission->update($request->all());
 
-        Session::flash('message', 'Permission updated!');
+        Session::flash('message', 'Permiso actualizado!');
         Session::flash('status', 'success');
 
         return redirect('admin/permissions');
@@ -111,7 +111,7 @@ class PermissionController extends Controller
 
         $permission->delete();
 
-        Session::flash('message', 'Permission deleted!');
+        Session::flash('message', 'Permiso eliminado!');
         Session::flash('status', 'success');
 
         return redirect('admin/permissions');

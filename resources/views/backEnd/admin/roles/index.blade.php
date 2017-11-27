@@ -6,7 +6,9 @@ Role
 Lista de Roles
 @endsection
 @section('content')
-
+  @if (Session::has('message'))
+    <div class="alert alert-info">{{ Session::get('message') }}</div>
+  @endif
     <h1>Roles <a href="{{ url('admin/roles/create') }}" class="btn btn-primary pull-right btn-sm">Agregar Nuevo Rol</a></h1>
     <div class="table table-responsive">
         <table class="table table-bordered table-striped table-hover" id="roles">
@@ -42,6 +44,21 @@ Lista de Roles
 <script type="text/javascript">
     $(document).ready(function(){
         $('#roles').DataTable({
+          "language": {
+            "lengthMenu": "Mostrar _MENU_ registros por página.",
+            "zeroRecords": "Lo sentimos. No se encontraron registros.",
+            "info": "Mostrando página _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay registros aún.",
+            "infoFiltered": "(filtrados de un total de _MAX_ registros)",
+            "search": "Búsqueda",
+            "LoadingRecords": "Cargando ...",
+            "Processing": "Procesando...",
+            "SearchPlaceholder": "Comience a teclear...",
+            "paginate": {
+              "previous": "Anterior",
+              "next": "Siguiente",
+            }
+          },
             columnDefs: [{
                 targets: [0],
                 visible: false,

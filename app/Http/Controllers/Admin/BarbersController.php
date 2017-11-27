@@ -46,7 +46,7 @@ class BarbersController extends Controller
 
         Barber::create($request->all());
 
-        Session::flash('message', 'Barber added!');
+        Session::flash('message', 'Barbero agregado!');
         Session::flash('status', 'success');
 
         return redirect('admin/barbers');
@@ -94,7 +94,7 @@ class BarbersController extends Controller
         $barber = Barber::findOrFail($id);
         $barber->update($request->all());
 
-        Session::flash('message', 'Barber updated!');
+        Session::flash('message', 'Barbero actualizado!');
         Session::flash('status', 'success');
 
         return redirect('admin/barbers');
@@ -113,7 +113,7 @@ class BarbersController extends Controller
 
         $barber->delete();
 
-        Session::flash('message', 'Barber deleted!');
+        Session::flash('message', 'Barbero eliminado!');
         Session::flash('status', 'success');
 
         return redirect('admin/barbers');

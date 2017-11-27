@@ -46,7 +46,7 @@ class ProvidersController extends Controller
 
         Provider::create($request->all());
 
-        Session::flash('message', 'Provider added!');
+        Session::flash('message', 'Proveedor agregado!');
         Session::flash('status', 'success');
 
         return redirect('admin/providers');
@@ -94,7 +94,7 @@ class ProvidersController extends Controller
         $provider = Provider::findOrFail($id);
         $provider->update($request->all());
 
-        Session::flash('message', 'Provider updated!');
+        Session::flash('message', 'Proveedor actualizado!');
         Session::flash('status', 'success');
 
         return redirect('admin/providers');
@@ -113,7 +113,7 @@ class ProvidersController extends Controller
 
         $provider->delete();
 
-        Session::flash('message', 'Provider deleted!');
+        Session::flash('message', 'Proveedor eliminado!');
         Session::flash('status', 'success');
 
         return redirect('admin/providers');

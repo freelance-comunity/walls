@@ -17,6 +17,7 @@
   <link href="{{asset('vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
   <link href="{{asset('vendor/datatables/dataTables.bootstrap4.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json">
   <!-- Custom styles for this template-->
   <link href="{{asset('css/sb-admin.css')}}" rel="stylesheet">
 </head>
@@ -118,7 +119,7 @@
         <li class="nav-item">
           <form class="form-inline my-2 my-lg-0 mr-lg-2">
             <div class="input-group">
-              <input class="form-control" type="text" placeholder="Search for...">
+              <input class="form-control" type="text" placeholder="Buscar...">
               <span class="input-group-btn">
                 <button class="btn btn-primary" type="button">
                   <i class="fa fa-search"></i>
@@ -144,7 +145,7 @@
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="#">Panel de Control</a>
+          <a href="{{url('/home')}}">Panel de Control</a>
         </li>
         <li class="breadcrumb-item active">@yield('title-dashboard')</li>
       </ol>

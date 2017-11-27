@@ -45,7 +45,7 @@ class RoleController extends Controller
 
         Role::create($request->all());
 
-        Session::flash('message', 'SpatiePermissionModelsRole added!');
+        Session::flash('message', 'Rol agregado!');
         Session::flash('status', 'success');
 
         return redirect('admin/roles');
@@ -92,7 +92,7 @@ class RoleController extends Controller
         $role = Role::findOrFail($id);
         $role->update($request->all());
 
-        Session::flash('message', 'SpatiePermissionModelsRole updated!');
+        Session::flash('message', 'Rol actualizado!');
         Session::flash('status', 'success');
 
         return redirect('admin/roles');
@@ -111,7 +111,7 @@ class RoleController extends Controller
 
         $role->delete();
 
-        Session::flash('message', 'SpatiePermissionModelsRole deleted!');
+        Session::flash('message', 'Rol eliminado!');
         Session::flash('status', 'success');
 
         return redirect('admin/roles');
