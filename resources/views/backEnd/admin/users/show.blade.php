@@ -1,23 +1,23 @@
 @extends('backLayout.app')
 @section('title')
-Provider
+User
 @stop
 @section('title-dashboard')
-Detalles de Proveedor
+  Detalle de Usuario
 @endsection
 @section('content')
 
-    <h1>Provider</h1>
+    <h1>Usuario</h1>
     <div class="table-responsive">
         <table class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th>ID.</th> <th>Name</th><th>Address</th><th>Phone</th>
+                    <th>ID.</th> <th>Nombre</th><th>Email</th><th>Contraseña</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>{{ $provider->id }}</td> <td> {{ $provider->name }} </td><td> {{ $provider->address }} </td><td> {{ $provider->phone }} </td>
+                    <td>{{ $user->id }}</td> <td> {{ $user->name }} </td><td> {{ $user->email }} </td><td> {{ $user->password }} </td>
                 </tr>
             </tbody>
         </table>

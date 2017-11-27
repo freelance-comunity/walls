@@ -1,36 +1,22 @@
 @extends('backLayout.app')
 @section('title')
-Create new Provider
+Create new User
 @stop
 @section('title-dashboard')
-Crear de Proveedor
+  Crear Usuario
 @endsection
 @section('content')
 
-    <h1>Crear Nuevo Proveedor</h1>
+    <h1>Crear Nuevo Usuario</h1>
     <hr/>
 
-    {!! Form::open(['url' => 'admin/providers', 'class' => 'form-horizontal']) !!}
+    {!! Form::open(['url' => 'admin/users', 'class' => 'form-horizontal']) !!}
 
                 <div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
-                {!! Form::label('name', 'Nombre: ', ['class' => 'col-sm-3 control-label']) !!}
+                {!! Form::label('name', 'Nombre Completo: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::text('name', null, ['class' => 'form-control', 'required' => 'required']) !!}
                     {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
-                </div>
-            </div>
-            <div class="form-group {{ $errors->has('address') ? 'has-error' : ''}}">
-                {!! Form::label('address', 'Dirección: ', ['class' => 'col-sm-3 control-label']) !!}
-                <div class="col-sm-6">
-                    {!! Form::text('address', null, ['class' => 'form-control', 'required' => 'required']) !!}
-                    {!! $errors->first('address', '<p class="help-block">:message</p>') !!}
-                </div>
-            </div>
-            <div class="form-group {{ $errors->has('phone') ? 'has-error' : ''}}">
-                {!! Form::label('phone', 'Teléfono: ', ['class' => 'col-sm-3 control-label']) !!}
-                <div class="col-sm-6">
-                    {!! Form::text('phone', null, ['class' => 'form-control', 'required' => 'required']) !!}
-                    {!! $errors->first('phone', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
@@ -38,6 +24,13 @@ Crear de Proveedor
                 <div class="col-sm-6">
                     {!! Form::email('email', null, ['class' => 'form-control', 'required' => 'required']) !!}
                     {!! $errors->first('email', '<p class="help-block">:message</p>') !!}
+                </div>
+            </div>
+            <div class="form-group {{ $errors->has('password') ? 'has-error' : ''}}">
+                {!! Form::label('password', 'Contraseña: ', ['class' => 'col-sm-3 control-label']) !!}
+                <div class="col-sm-6">
+                    {!! Form::password('password', ['class' => 'form-control', 'required' => 'required']) !!}
+                    {!! $errors->first('password', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
 

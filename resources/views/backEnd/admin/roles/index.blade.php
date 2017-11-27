@@ -1,30 +1,30 @@
 @extends('backLayout.app')
 @section('title')
-Proveedores
+Role
 @stop
 @section('title-dashboard')
-Lista de Proveedores
+Lista de Roles
 @endsection
 @section('content')
 
-    <h1>Proveedores <a href="{{ url('admin/providers/create') }}" class="btn btn-primary pull-right btn-sm">Agregar Nuevo Proveedor</a></h1>
+    <h1>Roles <a href="{{ url('admin/roles/create') }}" class="btn btn-primary pull-right btn-sm">Agregar Nuevo Rol</a></h1>
     <div class="table table-responsive">
-        <table class="table table-bordered table-striped table-hover" id="providers">
+        <table class="table table-bordered table-striped table-hover" id="roles">
             <thead>
                 <tr>
-                    <th>ID</th><th>Nombre</th><th>Dirección</th><th>Teléfono</th><th>Detalles</th>
+                    <th>ID</th><th>Nombre</th><th>Nombre Secundario</th><th>Detalles</th>
                 </tr>
             </thead>
             <tbody>
-            @foreach($providers as $item)
+            @foreach($roles as $item)
                 <tr>
                     <td>{{ $item->id }}</td>
-                    <td><a href="{{ url('admin/providers', $item->id) }}">{{ $item->name }}</a></td><td>{{ $item->address }}</td><td>{{ $item->phone }}</td>
+                    <td><a href="{{ url('admin/roles', $item->id) }}">{{ $item->name }}</a></td><td>{{ $item->guard_name }}</td>
                     <td>
-                        <a href="{{ url('admin/providers/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs">Actualizar</a>
+                        <a href="{{ url('admin/roles/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs">Actualizar</a>
                         {!! Form::open([
                             'method'=>'DELETE',
-                            'url' => ['admin/providers', $item->id],
+                            'url' => ['admin/roles', $item->id],
                             'style' => 'display:inline'
                         ]) !!}
                             {!! Form::submit('Eliminar', ['class' => 'btn btn-danger btn-xs']) !!}
@@ -41,7 +41,7 @@ Lista de Proveedores
 @section('scripts')
 <script type="text/javascript">
     $(document).ready(function(){
-        $('#providers').DataTable({
+        $('#roles').DataTable({
             columnDefs: [{
                 targets: [0],
                 visible: false,

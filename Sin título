@@ -1,1 +1,0 @@
-php artisan crud:generate Clients --fields="name:string:required, last_name:string:required, phone:string:required, birthday:date:required" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin

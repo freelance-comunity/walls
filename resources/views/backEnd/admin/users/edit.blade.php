@@ -1,40 +1,26 @@
 @extends('backLayout.app')
 @section('title')
-Editar Proveedor
+Editar Usuario
 @stop
 @section('title-dashboard')
-Editar de Proveedor
+  Editar Usuario
 @endsection
 @section('content')
 
-    <h1>Editar Proveedor</h1>
+    <h1>Editar Usuario</h1>
     <hr/>
 
-    {!! Form::model($provider, [
+    {!! Form::model($user, [
         'method' => 'PATCH',
-        'url' => ['admin/providers', $provider->id],
+        'url' => ['admin/users', $user->id],
         'class' => 'form-horizontal'
     ]) !!}
 
                 <div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
-                {!! Form::label('name', 'Nombre: ', ['class' => 'col-sm-3 control-label']) !!}
+                {!! Form::label('name', 'Nombre Completo: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::text('name', null, ['class' => 'form-control', 'required' => 'required']) !!}
                     {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
-                </div>
-            </div>
-            <div class="form-group {{ $errors->has('address') ? 'has-error' : ''}}">
-                {!! Form::label('address', 'Dirección: ', ['class' => 'col-sm-3 control-label']) !!}
-                <div class="col-sm-6">
-                    {!! Form::text('address', null, ['class' => 'form-control', 'required' => 'required']) !!}
-                    {!! $errors->first('address', '<p class="help-block">:message</p>') !!}
-                </div>
-            </div>
-            <div class="form-group {{ $errors->has('phone') ? 'has-error' : ''}}">
-                {!! Form::label('phone', 'Teléfono: ', ['class' => 'col-sm-3 control-label']) !!}
-                <div class="col-sm-6">
-                    {!! Form::text('phone', null, ['class' => 'form-control', 'required' => 'required']) !!}
-                    {!! $errors->first('phone', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
@@ -44,11 +30,18 @@ Editar de Proveedor
                     {!! $errors->first('email', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
+            <div class="form-group {{ $errors->has('password') ? 'has-error' : ''}}">
+                {!! Form::label('password', 'Contraseña: ', ['class' => 'col-sm-3 control-label']) !!}
+                <div class="col-sm-6">
+                    {!! Form::password('password', ['class' => 'form-control', 'required' => 'required']) !!}
+                    {!! $errors->first('password', '<p class="help-block">:message</p>') !!}
+                </div>
+            </div>
 
 
     <div class="form-group">
         <div class="col-sm-offset-3 col-sm-3">
-            {!! Form::submit('Actualizar', ['class' => 'btn btn-primary form-control']) !!}
+            {!! Form::submit('Actualizar', ['class' => 'btn btn-lg btn-primary form-control']) !!}
         </div>
     </div>
     {!! Form::close() !!}

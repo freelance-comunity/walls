@@ -182,6 +182,8 @@ return [
         //Laravel collective
         Collective\Html\HtmlServiceProvider::class,
 
+        //Spatie roles
+        //Spatie\Permission\PermissionServiceProvider::class,
     ],
 
     /*

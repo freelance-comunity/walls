@@ -26,6 +26,19 @@ Route::group(['middleware' => ['web']], function () {
 Route::group(['middleware' => ['web']], function () {
 	Route::resource('admin/barbers', 'Admin\\BarbersController');
 });
+
 Route::group(['middleware' => ['web']], function () {
 	Route::resource('admin/providers', 'Admin\\ProvidersController');
+});
+
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('admin/users', 'UserController');
+});
+
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('admin/roles', 'RoleController');
+});
+
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('admin/permissions', 'PermissionController');
 });

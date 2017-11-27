@@ -1,30 +1,30 @@
 @extends('backLayout.app')
 @section('title')
-Proveedores
+Permisos
 @stop
 @section('title-dashboard')
-Lista de Proveedores
+  Lista de Permisos
 @endsection
 @section('content')
 
-    <h1>Proveedores <a href="{{ url('admin/providers/create') }}" class="btn btn-primary pull-right btn-sm">Agregar Nuevo Proveedor</a></h1>
+    <h1>Permisos <a href="{{ url('admin/permissions/create') }}" class="btn btn-primary pull-right btn-sm">Agregar Nuevo Permiso</a></h1>
     <div class="table table-responsive">
-        <table class="table table-bordered table-striped table-hover" id="providers">
+        <table class="table table-bordered table-striped table-hover" id="permissions">
             <thead>
                 <tr>
-                    <th>ID</th><th>Nombre</th><th>Dirección</th><th>Teléfono</th><th>Detalles</th>
+                    <th>ID</th><th>Nombre</th><th>Nombre Secundario</th><th>Detalles</th>
                 </tr>
             </thead>
             <tbody>
-            @foreach($providers as $item)
+            @foreach($permissions as $item)
                 <tr>
                     <td>{{ $item->id }}</td>
-                    <td><a href="{{ url('admin/providers', $item->id) }}">{{ $item->name }}</a></td><td>{{ $item->address }}</td><td>{{ $item->phone }}</td>
+                    <td><a href="{{ url('admin/permissions', $item->id) }}">{{ $item->name }}</a></td><td>{{ $item->guard_name }}</td>
                     <td>
-                        <a href="{{ url('admin/providers/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs">Actualizar</a>
+                        <a href="{{ url('admin/permissions/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs">Actualizar</a>
                         {!! Form::open([
                             'method'=>'DELETE',
-                            'url' => ['admin/providers', $item->id],
+                            'url' => ['admin/permissions', $item->id],
                             'style' => 'display:inline'
                         ]) !!}
                             {!! Form::submit('Eliminar', ['class' => 'btn btn-danger btn-xs']) !!}
@@ -41,7 +41,7 @@ Lista de Proveedores
 @section('scripts')
 <script type="text/javascript">
     $(document).ready(function(){
-        $('#providers').DataTable({
+        $('#permissions').DataTable({
             columnDefs: [{
                 targets: [0],
                 visible: false,

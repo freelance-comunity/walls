@@ -5,12 +5,12 @@
       <span class="nav-link-text">Inicio</span>
     </a>
   </li>
-  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Clientes">
+    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseClients" data-parent="#exampleAccordion">
       <i class="fa fa-fw fa-users"></i>
       <span class="nav-link-text">Clientes</span>
     </a>
-    <ul class="sidenav-second-level collapse" id="collapseComponents">
+    <ul class="sidenav-second-level collapse" id="collapseClients">
       <li>
         <a href="{{url('admin/clients')}}">Ver</a>
       </li>
@@ -19,28 +19,45 @@
       </li>
     </ul>
   </li>
-  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
-    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Barberos">
+    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseBarbers" data-parent="#exampleAccordion">
       <i class="fa fa-fw fa-male"></i>
       <span class="nav-link-text">Barberos</span>
     </a>
-    <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+    <ul class="sidenav-second-level collapse" id="collapseBarbers">
       <li>
         <a href="{{url('admin/barbers')}}">Ver</a>
       </li>
     </ul>
   </li>
-  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
-    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
+  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Almacen">
+    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseAlmacen" data-parent="#exampleAccordion">
       <i class="fa fa-fw fa-cube"></i>
       <span class="nav-link-text">Almacen</span>
     </a>
-    <ul class="sidenav-second-level collapse" id="collapseMulti">
+    <ul class="sidenav-second-level collapse" id="collapseAlmacen">
       <li>
         <a href="{{url('admin/providers')}}">Proveedores</a>
       </li>
       <li>
         <a href="#">Productos</a>
+      </li>
+    </ul>
+  </li>
+  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Administración">
+    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseManagment" data-parent="#exampleAccordion">
+      <i class="fa fa-fw fa-cogs"></i>
+      <span class="nav-link-text">Administración</span>
+    </a>
+    <ul class="sidenav-second-level collapse" id="collapseManagment">
+      <li>
+        <a href="{{url('admin/users')}}">Usuarios</a>
+      </li>
+      <li>
+        <a href="{{url('admin/roles')}}">Roles</a>
+      </li>
+      <li>
+        <a href="{{url('admin/permissions')}}">Permisos</a>
       </li>
     </ul>
   </li>
