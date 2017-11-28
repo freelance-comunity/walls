@@ -2,7 +2,9 @@
 @section('title')
 Barberos
 @stop
-
+@section('title-dashboard')
+  Lista de Proveedores
+@endsection
 @section('content')
   @if (Session::has('message'))
     <div class="alert alert-info">{{ Session::get('message') }}</div>
@@ -19,7 +21,7 @@ Barberos
             @foreach($barbers as $item)
                 <tr>
                     <td>{{ $item->id }}</td>
-                    <td><a href="{{ url('admin/barbers', $item->id) }}">{{ $item->name }}</a></td><td>{{ $item->last_name }}</td><td>{{ $item->photo }}</td>
+                    <td><a href="{{ url('admin/barbers', $item->id) }}">{{ $item->name }}</a></td><td>{{ $item->last_name }}</td><td><img class="rounded-circle" src="{{asset('images/avatars')}}/{{ $item->photo }}"></td>
                     <td>
                         <a href="{{ url('admin/barbers/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs">Actualizar</a>
                         {!! Form::open([

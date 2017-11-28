@@ -12,7 +12,7 @@ Detalles de cliente
         <table class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th>ID.</th> <th>Name</th><th>Last Name</th><th>Phone</th>
+                    <th>ID.</th> <th>Nombre</th><th>Apellidos</th><th>Teléfono</th>
                 </tr>
             </thead>
             <tbody>

@@ -42,9 +42,14 @@ class BarbersController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, ['name' => 'required', 'last_name' => 'required', 'photo' => 'required', 'phone' => 'required', 'address' => 'required', 'birthday' => 'required', 'status' => 'required', ]);
+        $this->validate($request, ['name' => 'required', 'last_name' => 'required', 'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048', 'phone' => 'required', 'address' => 'required', 'birthday' => 'required', 'status' => 'required', ]);
 
-        Barber::create($request->all());
+        $imageName = time().'.'.request()->photo->getClientOriginalExtension();
+        request()->photo->move(public_path('images/avatars'), $imageName);
+
+        $input = $request->all();
+        $input['photo'] = $imageName;
+        Barber::create($input);
 
         Session::flash('message', 'Barbero agregado!');
         Session::flash('status', 'success');

@@ -8,7 +8,7 @@ Create new Barber
     <h1>Crear Nuevo Barbero</h1>
     <hr/>
 
-    {!! Form::open(['url' => 'admin/barbers', 'class' => 'form-horizontal']) !!}
+    {!! Form::open(['url' => 'admin/barbers', 'class' => 'form-horizontal', 'files' => 'true']) !!}
 
                 <div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
                 {!! Form::label('name', 'Nombre(s): ', ['class' => 'col-sm-3 control-label']) !!}
@@ -27,7 +27,7 @@ Create new Barber
             <div class="form-group {{ $errors->has('photo') ? 'has-error' : ''}}">
                 {!! Form::label('photo', 'Foto: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::text('photo', null, ['class' => 'form-control', 'required' => 'required']) !!}
+                    {!! Form::file('photo', null, ['class' => 'form-control', 'required' => 'required']) !!}
                     {!! $errors->first('photo', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>

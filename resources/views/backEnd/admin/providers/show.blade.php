@@ -12,7 +12,7 @@ Detalles de Proveedor
         <table class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th>ID.</th> <th>Name</th><th>Address</th><th>Phone</th>
+                    <th>ID.</th> <th>Nombre</th><th>Dirección</th><th>Teléfono</th>
                 </tr>
             </thead>
             <tbody>
