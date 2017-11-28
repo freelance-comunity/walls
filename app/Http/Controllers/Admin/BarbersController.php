@@ -94,9 +94,10 @@ class BarbersController extends Controller
      */
     public function update($id, Request $request)
     {
-        $this->validate($request, ['name' => 'required', 'last_name' => 'required', 'photo' => 'required', 'phone' => 'required', 'address' => 'required', 'birthday' => 'required', 'status' => 'required', ]);
+        $this->validate($request, ['name' => 'required', 'last_name' => 'required', 'phone' => 'required', 'address' => 'required', 'birthday' => 'required', 'status' => 'required', ]);
 
         $barber = Barber::findOrFail($id);
+
         $barber->update($request->all());
 
         Session::flash('message', 'Barbero actualizado!');

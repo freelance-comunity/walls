@@ -11,7 +11,8 @@ Editar Barbero
     {!! Form::model($barber, [
         'method' => 'PATCH',
         'url' => ['admin/barbers', $barber->id],
-        'class' => 'form-horizontal'
+        'class' => 'form-horizontal',
+        'files' => 'true'
     ]) !!}
 
                 <div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
@@ -28,13 +29,21 @@ Editar Barbero
                     {!! $errors->first('last_name', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
-            <div class="form-group {{ $errors->has('photo') ? 'has-error' : ''}}">
+            {{-- <div class="form-group">
+                {!! Form::label('photo', 'Foto: ', ['class' => 'col-sm-3 control-label']) !!}
+                <div class="col-sm-6">
+                    <img class="rounded-circle" src="{{asset('images/avatars')}}/{{ $barber->photo }}">
+                    {!! Form::file('photo', null, ['class' => 'form-control', 'required' => 'required']) !!}
+                    {!! $errors->first('photo', '<p class="help-block">:message</p>') !!}
+                </div>
+            </div> --}}
+            {{-- <div class="form-group {{ $errors->has('photo') ? 'has-error' : ''}}">
                 {!! Form::label('photo', 'Foto: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::text('photo', null, ['class' => 'form-control', 'required' => 'required']) !!}
                     {!! $errors->first('photo', '<p class="help-block">:message</p>') !!}
                 </div>
-            </div>
+            </div> --}}
             <div class="form-group {{ $errors->has('phone') ? 'has-error' : ''}}">
                 {!! Form::label('phone', 'Phone: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
