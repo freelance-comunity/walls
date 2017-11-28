@@ -54,8 +54,7 @@ Crear nueva cita
                     {!! $errors->first('end_date', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
-
-
+            
     <div class="form-group">
         <div class="col-sm-offset-3 col-sm-3">
             {!! Form::submit('Crear', ['class' => 'btn btn-lg btn-primary form-control']) !!}
