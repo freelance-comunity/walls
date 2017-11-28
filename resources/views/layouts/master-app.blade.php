@@ -12,6 +12,11 @@
 
   <title>{{ config('app.name', 'Laravel') }}</title>
   <!-- Bootstrap core CSS-->
+  <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
+
   <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
   <!-- Custom fonts for this template-->
   <link href="{{asset('vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
@@ -20,6 +25,7 @@
   <link rel="stylesheet" href="//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json">
   <!-- Custom styles for this template-->
   <link href="{{asset('css/sb-admin.css')}}" rel="stylesheet">
+  {{-- jQuery full calendar --}}
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -186,7 +192,6 @@
       </div>
     </div>
     <!-- Bootstrap core JavaScript-->
-    <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <!-- Core plugin JavaScript-->
     <script src="{{asset('vendor/jquery-easing/jquery.easing.min.js')}}"></script>

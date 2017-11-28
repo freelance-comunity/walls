@@ -184,6 +184,8 @@ return [
 
         //Spatie roles
         //Spatie\Permission\PermissionServiceProvider::class,
+        Spatie\GoogleCalendar\GoogleCalendarServiceProvider::class,
+        MaddHatter\LaravelFullcalendar\ServiceProvider::class,
     ],
 
     /*
@@ -237,6 +239,10 @@ return [
         'Form' => Collective\Html\FormFacade::class,
 
         'HTML' => Collective\Html\HtmlFacade::class,
+
+        'GoogleCalendar' => Spatie\GoogleCalendar\GoogleCalendarFacade::class,
+
+        'Calendar' => MaddHatter\LaravelFullcalendar\Facades\Calendar::class,
 
     ],
 

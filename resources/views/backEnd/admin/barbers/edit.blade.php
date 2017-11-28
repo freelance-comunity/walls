@@ -68,7 +68,7 @@ Editar Barbero
             <div class="form-group {{ $errors->has('status') ? 'has-error' : ''}}">
                 {!! Form::label('status', 'Estatus: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::number('status', null, ['class' => 'form-control', 'required' => 'required']) !!}
+                    {!! Form::select('status',['1'=>'ACTIVO','2'=>'INACTIVO'], null, ['class' => 'form-control', 'required' => 'required']) !!}
                     {!! $errors->first('status', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>

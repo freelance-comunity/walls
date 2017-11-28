@@ -15,7 +15,7 @@
         <a href="{{url('admin/clients')}}">Ver</a>
       </li>
       <li>
-        <a href="#">Citas</a>
+        <a href="{{url('admin/quotes')}}">Citas</a>
       </li>
     </ul>
   </li>
