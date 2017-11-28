@@ -15,7 +15,7 @@ Barber
             </thead>
             <tbody>
                 <tr>
-                    <td>{{ $barber->id }}</td> <td> {{ $barber->name }} </td><td> {{ $barber->last_name }} </td><td> {{ $barber->photo }} </td>
+                    <td>{{ $barber->id }}</td> <td> {{ $barber->name }} </td><td> {{ $barber->last_name }} </td><td><img class="rounded-circle" src="{{asset('images/avatars')}}/{{ $barber->photo }}"></td>
                 </tr>
             </tbody>
         </table>
