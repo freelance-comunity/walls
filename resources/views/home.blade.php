@@ -85,7 +85,7 @@
         <i class="fa fa-bell-o"></i> Citas Programadas del Día</div>
       <div class="list-group list-group-flush small">
         @if($quotes->isEmpty())
-        <div class="well text-center">No Debts found.</div>
+        <div class="well text-center">No se han creado citas.</div>
         @else @foreach ($quotes as $key => $quote) @php $barber = App\Barber::find($quote->barber); @endphp
         <a class="list-group-item list-group-item-action" href="#">
           <div class="media">
